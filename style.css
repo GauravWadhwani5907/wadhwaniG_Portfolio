@@ -897,7 +897,16 @@ input
   padding: 0px 7px;
 } 
 
-
+.alert
+{
+  width: 92%;
+  padding: 10px 20px;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
 
 
 /* R E S P O N S I V E  */
