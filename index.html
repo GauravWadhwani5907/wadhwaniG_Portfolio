@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,8 +89,7 @@
 
                 <h1>About</h1>
 
-                      <p>Everything you can Imagine is real, I have extensive knowledge of HTML, CSS, JavaScript, ReactJS, SQL, and many more technologies. Combined with my communication and problem-solving skills</p>
-
+                <p>Everything you can Imagine is real, I have extensive knowledge of HTML, CSS, JavaScript, ReactJS, SQL, and many more technologies. Combined with my communication and problem-solving skills</p>
             </div>
             <div id="g2">
                 <li id="golu2"><img src="about_Image/web.png" alt="" class="icon"></li>
@@ -117,8 +117,7 @@
 
                         </div>
                         <div id="lastPara">
-                                                       <p> I design, code, and implement websites for a variety of clients. In my latest project, I have created my portfolio and a fitness website with my own designs , and previously a youtuber's food channel website designed by me.I have always been passionate about web development, which led me to pursue a Bachelor of Computer Science degree. I am constantly seeking out new technologies and staying up-to-date on trends in the industry.I would be so thrilled to join the team as a Web Developer.</p>
-
+                            <p> I design, code, and implement websites for a variety of clients. In my latest project, I have created my portfolio and a fitness website with my own designs , and previously a youtuber's food channel website designed by me.I have always been passionate about web development, which led me to pursue a Bachelor of Computer Science degree. I am constantly seeking out new technologies and staying up-to-date on trends in the industry.I would be so thrilled to join the team as a Web Developer.</p>
                         </div>
                     </div>
 
@@ -352,7 +351,8 @@
                 </li>
                 <li>
 
-                    <form action="">
+                    <form action="" id="contactForm">
+                        <div class="alert">Your message sent</div>
                         <div class="form">
                             <label for="name">Name </label><br>
                             <input type="text" id="name" name="name" placeholder="Enter your name">
@@ -369,7 +369,7 @@
                             <label for="message">Message </label><br>
                             <textarea name="message" id="message" cols="30" rows="10" placeholder="If you are new to this website fill the details and send the message for existing users click on mail image at the top of the sidebar near linkedIn image"></textarea>
                         </div>
-                      <a href="mailto:wadhwanig26@gmail.com"> <button class="sendbtn">Send Message</button></a> 
+                       <button type="submit"  id="senD" class="sendbtn">Send Message</button> 
                         </form>
 
                 </li>
@@ -386,115 +386,101 @@
 
 
 </body>
+
 <script>
-    // PROJECT SECTION
-    // var slider_img = document.querySelector('.slider-img');
-    // var images = ['portfolio.png', 'fitsite.png', 'movie.png', 'staple.png', 'depression.jpg'];
-    // var i = 0;
-    // function prev()
-    // {
-    // if(i<=0) i = images.length;
-    // i--;
-    // return setImg();
-    // }
-    // function next()
-    // {
-    //     if(i >= images.length-1) i = -1;
-    //     i++;
-    //     return setImg();
-    // }
-    // function setImg()
-    // {
-    //     return slider_img.setAttribute('src', 'images/' + images[i]);
-    // }
-
-    let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-
-    image1 = document.getElementById('git')
-    image2 = document.getElementById('linked')
-    image3 = document.getElementById('mailed')
-
-    image1.addEventListener('mouseover', change1)
-    image1.addEventListener('mouseout', normal1)
-
-    image2.addEventListener('mouseover', change2)
-    image2.addEventListener('mouseout', normal2)
-
-    image3.addEventListener('mouseover', change3)
-    image3.addEventListener('mouseout', normal3)
-
-    function change1() {
-        image1.src = "sidebarImage/gitBlue.png"
-    }
-    function normal1() {
-        image1.src = "sidebarImage/github.png"
-    }
-
-    function change2() {
-
-        image2.src = "sidebarImage/linkedinBlue.jpg"
-
-    }
-    function normal2() {
-
-        image2.src = "sidebarImage/linkedin.jpg"
-
-    }
-    function change3() {
-
-        image3.src = "sidebarImage/mailBlue.png"
-
-    }
-    function normal3() {
-
-        image3.src = "sidebarImage/mail.png"
-
-    }
-    console.log("Running")
-
-    document.querySelector('.cross').style.display = 'none';
-    document.querySelector('.hamburger').addEventListener("click", () => {
-        document.querySelector('.sidebar').classList.toggle('sidebar_go');
-        if (document.querySelector('.sidebar').classList.contains('sidebar_go')) {
-            document.querySelector('.ham').style.display = 'inline'
-            document.querySelector('.cross').style.display = 'none'
-        }
-        else {
-            document.querySelector('.ham').style.display = 'none';
-            setTimeout(() => {
-                document.querySelector('.cross').style.display = 'inline';
-            }, 300)
-
-        }
-    })
+    
 </script>
+<script> let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    
+    
+        image1 = document.getElementById('git')
+        image2 = document.getElementById('linked')
+        image3 = document.getElementById('mailed')
+    
+        image1.addEventListener('mouseover', change1)
+        image1.addEventListener('mouseout', normal1)
+    
+        image2.addEventListener('mouseover', change2)
+        image2.addEventListener('mouseout', normal2)
+    
+        image3.addEventListener('mouseover', change3)
+        image3.addEventListener('mouseout', normal3)
+    
+        function change1() {
+            image1.src = "sidebarImage/gitBlue.png"
+        }
+        function normal1() {
+            image1.src = "sidebarImage/github.png"
+        }
+    
+        function change2() {
+    
+            image2.src = "sidebarImage/linkedinBlue.jpg"
+    
+        }
+        function normal2() {
+    
+            image2.src = "sidebarImage/linkedin.jpg"
+    
+        }
+        function change3() {
+    
+            image3.src = "sidebarImage/mailBlue.png"
+    
+        }
+        function normal3() {
+    
+            image3.src = "sidebarImage/mail.png"
+    
+        }
+        console.log("Running")
+    
+        document.querySelector('.cross').style.display = 'none';
+        document.querySelector('.hamburger').addEventListener("click", () => {
+            document.querySelector('.sidebar').classList.toggle('sidebar_go');
+            if (document.querySelector('.sidebar').classList.contains('sidebar_go')) {
+                document.querySelector('.ham').style.display = 'inline'
+                document.querySelector('.cross').style.display = 'none'
+            }
+            else {
+                document.querySelector('.ham').style.display = 'none';
+                setTimeout(() => {
+                    document.querySelector('.cross').style.display = 'inline';
+                }, 300)
+    
+            }
+        })
+    
+        </script>
 
+        <!-- Contact Details Firebase Config -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+        <script src="first.js"></script>
 </html>
